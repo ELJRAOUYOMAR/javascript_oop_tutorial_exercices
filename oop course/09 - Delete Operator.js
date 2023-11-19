@@ -1,0 +1,48 @@
+/*
+  Delete Operator
+*/
+
+const user = { name: "OMAR" };
+
+console.log(user);
+console.log(user.name);
+
+// delete user; // Delete Property Not Object
+// delete user.name;
+// delete user["name"];
+console.log(delete user["name"]);
+
+console.log(user);
+console.log(user.name);
+
+console.log("#".repeat(15));
+
+const username = "Khalid";
+console.log(username);
+console.log(delete username);
+console.log(username);
+
+console.log("#".repeat(15));
+
+const freezedObj = Object.freeze({ age: 37 });
+console.log(freezedObj);
+console.log(freezedObj.age);
+
+console.log(delete freezedObj.age);
+
+console.log(freezedObj);
+console.log(freezedObj.age);
+
+console.log("#".repeat(15));
+
+const eObj = {};
+//if we need to delete or modify something, we can switch the configurable to true 
+Object.defineProperty(eObj, "a", { value: 1, configurable: false });
+console.log(eObj);
+console.log(eObj.a);
+
+console.log(delete eObj.a);
+
+console.log(eObj);
+console.log(eObj.a);
+Object
